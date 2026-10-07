@@ -1,5 +1,4 @@
-# Arena – Gaming Tournament Portal (SDC Review-1 outline)
-HTML + CSS + JavaScript only. Data is stored in Local Storage.
+# Arena – Gaming Tournament Portal
 
 | Role  | Username | Password  |
 |-------|----------|-----------|
