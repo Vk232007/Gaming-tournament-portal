@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arena Portal – Player</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="navbar">
+  <h2>Welcome, <span id="who"></span></h2>
+  <button class="ghost" style="color:#fff;border-color:#fff" onclick="logout()">Log out</button>
+</header>
+<main class="layout single">
+  <section class="panel"><h2>Open tournaments</h2><div id="open" class="grid"></div></section>
+  <section class="panel"><h2>My registrations</h2><div id="mine" class="grid"></div></section>
+  <!-- TODO (full version): profile page, search/filter by game, leaderboard -->
+</main>
+<script src="js/common.js"></script>
+<script src="js/user.js"></script>
+</body>
+</html>

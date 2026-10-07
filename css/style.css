@@ -1,0 +1,38 @@
+:root{--ink:#14162b;--indigo:#232a5c;--paper:#f3f4fb;--accent:#ff4d6d;--gold:#ffd166;--card:#fff;--muted:#6b6f8d}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Trebuchet MS','Segoe UI',sans-serif;background:var(--paper);color:var(--ink);min-height:100vh}
+button{cursor:pointer;font:inherit;border:0;border-radius:6px;padding:.6rem 1rem;background:var(--accent);color:#fff;font-weight:700}
+button.ghost{background:transparent;color:var(--indigo);border:2px solid var(--indigo)}
+button.danger{background:#b3261e}
+button:disabled{opacity:.55;cursor:not-allowed}
+input,select{width:100%;padding:.65rem;border:2px solid #cfd2ea;border-radius:6px;font:inherit;margin-bottom:.8rem}
+input:focus,select:focus,button:focus-visible{outline:3px solid var(--gold)}
+label{font-weight:700;font-size:.9rem}
+.msg{min-height:1.2rem;margin-bottom:.6rem;font-weight:700;color:var(--accent)}
+
+/* Landing / auth: Flexbox split */
+.auth-page{display:flex;min-height:100vh}
+.auth-hero{flex:1;background:var(--indigo);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:3rem}
+.auth-hero h1{font-size:clamp(2.2rem,5vw,4rem);line-height:1.05}
+.auth-hero p{margin-top:1rem;max-width:34ch;color:#c9ccf0}
+.auth-box{flex:1;display:flex;align-items:center;justify-content:center;padding:2rem}
+.auth-card{width:100%;max-width:380px}
+.tabs{display:flex;gap:.5rem;margin-bottom:1.2rem}
+.tabs button{flex:1}
+.hidden{display:none}
+
+/* Dashboards: Flexbox navbar + Grid content */
+.navbar{display:flex;justify-content:space-between;align-items:center;background:var(--indigo);color:#fff;padding:1rem 2rem}
+.navbar span{color:var(--gold)}
+.layout{display:grid;grid-template-columns:320px 1fr;gap:1.5rem;padding:1.5rem 2rem}
+.layout.single{grid-template-columns:1fr}
+.panel{background:var(--card);border-radius:10px;padding:1.2rem;border-left:6px solid var(--accent)}
+.panel h2{margin-bottom:1rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1rem}
+.t-card{background:var(--paper);border-radius:10px;padding:1rem;border-top:6px solid var(--gold);display:flex;flex-direction:column;gap:.4rem}
+.t-card .meta{color:var(--muted);font-size:.9rem}
+.t-card .actions{margin-top:auto;display:flex;gap:.5rem}
+.badge{align-self:flex-start;background:var(--indigo);color:#fff;border-radius:4px;padding:.1rem .5rem;font-size:.8rem}
+.empty{color:var(--muted);padding:1rem}
+@media(max-width:800px){.auth-page{flex-direction:column}.layout{grid-template-columns:1fr}}
+.tabs button.active{background:var(--indigo);color:#fff}

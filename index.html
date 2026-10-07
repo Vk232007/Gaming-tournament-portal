@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arena Portal – Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="auth-page">
+  <section class="auth-hero">
+    <h1>Arena<br>Tournament Portal</h1>
+    <p>Browse gaming tournaments, claim a slot, and compete. Organisers create and manage events.</p>
+  </section>
+  <section class="auth-box">
+    <div class="auth-card">
+      <div class="tabs">
+        <button class="ghost" data-tab="admin" onclick="showTab('admin')">Admin</button>
+        <button class="ghost" data-tab="user" onclick="showTab('user')">User</button>
+        <button class="ghost" data-tab="signup" onclick="showTab('signup')">Sign up</button>
+      </div>
+      <div id="msg" class="msg"></div>
+
+      <form id="loginForm">
+        <h2 id="loginTitle" style="margin-bottom:1rem"></h2>
+        <label for="li_user">Username</label><input id="li_user" autocomplete="username" required>
+        <label for="li_pass">Password</label><input id="li_pass" type="password" autocomplete="current-password" required>
+        <button type="submit">Log in</button>
+      </form>
+
+      <form id="signupForm" class="hidden">
+        <h2 style="margin-bottom:1rem">New player</h2>
+        <label for="su_name">Full name</label><input id="su_name" required>
+        <label for="su_user">Username</label><input id="su_user" required>
+        <label for="su_pass">Password</label><input id="su_pass" type="password" minlength="6" required>
+        <button type="submit">Create account</button>
+      </form>
+    </div>
+  </section>
+</div>
+<script src="js/common.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>
